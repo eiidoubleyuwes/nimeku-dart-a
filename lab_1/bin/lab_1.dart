@@ -4,16 +4,16 @@ void main() {
   //To declare a late variable
   late dynamic name;
   //print age using string interpolation
-  print("I am $age years old");
+  print('I am $age years old');
   //change age to string
-  age = "Twenty three";
-  print("I am $age years old");
+  age = 'Twenty three';
+  print('I am $age years old');
   //print name
-  name = "Baraka Mbugua";
-  print("My name is $name");
+  name = 'Baraka Mbugua';
+  print('My name is $name');
   //Null variable
   dynamic admNo;
-  print("My admission number is $admNo");
+  print('My admission number is $admNo');
   //using collections
   var ages = [23, 24, 25, 26, 27];
   ages.forEach((e) {
@@ -27,11 +27,11 @@ void main() {
   int sum = 0;
   for (int age in ages) {
     sum += age;
-    print("The sum of the ages is $sum");
+    print('The sum of the ages is $sum');
   }
   //To compute the average of the ages
   double average = sum / ages.length;
-  print("The average of the ages is $average");
+  print('The average of the ages is $average');
   //To add an element to the list
   ages.add(45);
   //to delete an element from the list
@@ -49,17 +49,25 @@ void main() {
   print(ages);
   //Using maps to store data
   var student = {
-    "name": "Baraka Mbugua",
-    "age": 23,
-    "admission": "21-2084",
-    "course": "Bsc. Computer Science",
-    "YOG": "2025"
+    'name': 'Baraka Mbugua',
+    'age': 23,
+    'admission': '21-2084',
+    'course': 'Bsc. Computer Science',
+    'YOG': '2025'
   };
   //to print elements in a map
-  var jina = student["name"];
-  var miaka = student["age"];
-  var number = student["admission"];
-  print ("My name is $jina and I am $miaka years old , I am also adm-no $number"); //This way is outdated
+  var jina = student['name'];
+  var miaka = student['age'];
+  var number = student['admission'];
+  print(
+      'My name is $jina and I am $miaka years old , I am also adm-no $number'); //This way is outdated
   //To print the new way
-  print("My name is ${student["name"]} and I am ${student["age"]} years old , I am also adm-no ${student["admission"]}"); 
+  print(
+      'My name is ${student['name']} and I am ${student['age']} years old , I am also adm-no ${student['admission']}');
+  //and even cooler way using for each loop
+  student.forEach((key, value) {
+    print('$key : $value');
+  });
+  //How to add additional values to a MAP
+  student.addEntries({'Hobbies': 'Formula 1'} as Iterable<MapEntry<String, Object>>);
 }
