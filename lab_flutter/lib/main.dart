@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
       backgroundColor: primaryColor,
       foregroundColor: appWhiteColor,
       titleTextStyle: TextStyle(
-          color: apptextColor,
+          color: headercolor,
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
       )
