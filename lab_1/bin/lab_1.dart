@@ -47,4 +47,19 @@ void main() {
   print(ages);
   //to print the list
   print(ages);
+  //Using maps to store data
+  var student = {
+    "name": "Baraka Mbugua",
+    "age": 23,
+    "admission": "21-2084",
+    "course": "Bsc. Computer Science",
+    "YOG": "2025"
+  };
+  //to print elements in a map
+  var jina = student["name"];
+  var miaka = student["age"];
+  var number = student["admission"];
+  print ("My name is $jina and I am $miaka years old , I am also adm-no $number"); //This way is outdated
+  //To print the new way
+  print("My name is ${student["name"]} and I am ${student["age"]} years old , I am also adm-no ${student["admission"]}"); 
 }
