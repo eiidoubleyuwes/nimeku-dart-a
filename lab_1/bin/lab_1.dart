@@ -11,5 +11,7 @@ void main() {
   //print name
   name = "Baraka Mbugua";
   print("My name is $name");
+  dynamic? adm_no;
+  print("My admission number is $adm_no");
 
 }
