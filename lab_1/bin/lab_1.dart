@@ -69,5 +69,7 @@ void main() {
     print('$key : $value');
   });
   //How to add additional values to a MAP
-  student.addEntries({'Hobbies': 'Formula 1'} as Iterable<MapEntry<String, Object>>);
+  student.addEntries(
+      {'Hobbies': 'Formula 1'} as Iterable<MapEntry<String, Object>>);
+  print(student);
 }
