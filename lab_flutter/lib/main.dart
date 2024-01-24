@@ -25,6 +25,21 @@ class Home extends StatelessWidget {
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
       )
-    ));
+    ),
+    body: Column(
+      children: [
+        Text('Username', style: TextStyle(
+          color: textcolorgrey,
+          fontSize: 18.0,
+          fontWeight: FontWeight.bold,
+        )),
+        Text('Password', style: TextStyle(
+          color: textcolorgrey,
+          fontSize: 18.0,
+          fontWeight: FontWeight.bold,
+        )),
+      ],
+    ),
+    );
   }
 }
