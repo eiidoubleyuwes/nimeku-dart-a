@@ -32,6 +32,7 @@ class Home extends StatelessWidget {
         //Created a widget for the text
         customText("Username", label: 'Username',),
         customText("Password", label: 'Password',),
+        customText("Forgot password", label: 'Forgot password?')
       ],
     ),
     );
