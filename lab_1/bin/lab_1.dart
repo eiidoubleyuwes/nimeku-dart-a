@@ -11,7 +11,15 @@ void main() {
   //print name
   name = "Baraka Mbugua";
   print("My name is $name");
+  //Null variable
   dynamic? adm_no;
   print("My admission number is $adm_no");
+  //using collections
+  var ages = [23, 24, 25, 26, 27];
+  ages.forEach((element) { print(element); }); //Using a for each loop to print the elements
+  //other for form of for statement
+  for(int age in ages){
+    print(age);
+  }
 
 }
