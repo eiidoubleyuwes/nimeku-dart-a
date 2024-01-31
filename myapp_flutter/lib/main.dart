@@ -2,6 +2,7 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
+import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
 
 void main() {
@@ -15,6 +16,8 @@ class Home extends StatelessWidget {
   const Home({super.key});
   @override
   Widget build(BuildContext context) {
+  TextEditingController textController = TextEditingController();
+
     return Scaffold(
         appBar: AppBar(
       title: Text('App ya mine'),
@@ -28,13 +31,15 @@ class Home extends StatelessWidget {
       )
     ),
     body: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.center,
+      // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         //Created a widget for the text
-        customText("Username", label: 'Username',),
-        customText("Password", label: 'Password',),
-        customText("Forgot password", label: 'Forgot password?')
+        customText("Login page",label: 'Login Page', fontWeight: FontWeight.bold,fontSize: 36.0,),
+        customText("Username", label: 'Username', fontSize: 18.0,),
+        CustomTextWidget("Username", label: 'Username',),
+        customText("Password", label: 'Password', fontSize: 18.0,),
+        customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
       ],
     ),
     );
@@ -42,12 +47,5 @@ class Home extends StatelessWidget {
 }
 
 
-  @override
-  Widget build(BuildContext context) {
-    return Text('Username', style: TextStyle(
-      color: textcolorgrey,
-      fontSize: 18.0,
-      fontWeight: FontWeight.bold,
-    ));
-  }
+
 

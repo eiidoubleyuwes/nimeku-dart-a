@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
 
 class customText extends StatelessWidget {
+  final FontWeight fontWeight;
   final String label;
   customText(
     String s, {
     super.key,
     required this.label,
+    this.fontWeight = FontWeight.normal, required double fontSize,
   });
 
   @override
@@ -15,7 +17,7 @@ class customText extends StatelessWidget {
         style: TextStyle(
           color: textcolorblack,
           fontSize: 18.0,
-          fontWeight: FontWeight.bold,
+          fontWeight: fontWeight,
         ));
   }
 }
