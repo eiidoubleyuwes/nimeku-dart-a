@@ -5,6 +5,7 @@ void main() {
   print(multiply(45, 67));
   print(divide(9, 9));
   print(subtract(45 , 8));
+  print(calculate(45, b: 8, c: 9, d: 10));
 }
 
 add(a, b) => a + b;
@@ -19,4 +20,8 @@ int subtract(int a ,[int? b = 0]){
   else {
     return a - b;
   }
+}
+int calculate(int a, {int? b = 0, int? c = 0, int? d = 0}) {
+  return a + b! - c! * d!; 
+  
 }
