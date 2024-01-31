@@ -28,6 +28,8 @@ class Home extends StatelessWidget {
       )
     ),
     body: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         //Created a widget for the text
         customText("Username", label: 'Username',),
