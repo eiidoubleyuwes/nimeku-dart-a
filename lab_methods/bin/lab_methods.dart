@@ -28,7 +28,7 @@ int calculate(int a, {int? b = 0, int? c = 0, int? d = 0}) { //Named parameters
   return a + b! - c! * d!;
 }
 
-int celsiusToFahrenheit(dynamic celsius, [dynamic? fahrenheit = 256]) { //Default parameters
+int celsiusToFahrenheit(dynamic celsius, [dynamic fahrenheit = 256]) { //Default parameters
   if (fahrenheit == null) {
     return (celsius + fahrenheit).round();
   } else {
