@@ -7,6 +7,7 @@ void main() {
   print(subtract(45, 8));
   print(calculate(45, b: 8, c: 9, d: 10));
   print(celsiusToFahrenheit(45, 256));
+  print(requiredParameter(45, b: 8));
 }
 
 add(a, b) => a + b;
@@ -15,7 +16,7 @@ int divide(int a, int b) {
   return a ~/ b;
 }
 
-int subtract(int a, [int? b = 0]) {
+int subtract(int a, [int? b = 0]) { //Optional parameters
   if (b == null) {
     return -a;
   } else {
@@ -23,14 +24,18 @@ int subtract(int a, [int? b = 0]) {
   }
 }
 
-int calculate(int a, {int? b = 0, int? c = 0, int? d = 0}) {
+int calculate(int a, {int? b = 0, int? c = 0, int? d = 0}) { //Named parameters
   return a + b! - c! * d!;
 }
 
-int celsiusToFahrenheit(dynamic celsius, [dynamic? fahrenheit = 256]) {
+int celsiusToFahrenheit(dynamic celsius, [dynamic? fahrenheit = 256]) { //Default parameters
   if (fahrenheit == null) {
     return (celsius + fahrenheit).round();
   } else {
     return (fahrenheit - celsius);
   }
+
+}
+int requiredParameter(int a, {required int b}) { // Required parameters
+  return a + b;
 }
