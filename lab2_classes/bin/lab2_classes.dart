@@ -14,9 +14,21 @@ class Example {
     this.b = b;
   }
 }
+
 class Example2 {
   late int a;
   late int b;
   //Second constructor example
   Example2(this.a, this.b);
+}
+
+//Learning inheritance
+class parent {
+  int a;
+  int b;
+  parent(this.a, this.b);
+}
+class child extends parent {
+  //Parent constructor must be called first before child constructor
+  child(int a, int b) : super(a, b);
 }
