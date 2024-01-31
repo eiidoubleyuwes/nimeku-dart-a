@@ -39,6 +39,10 @@ class Home extends StatelessWidget {
         customText("Username", label: 'Username', fontSize: 18.0,),
         CustomTextWidget("Username", label: 'Username',),
         customText("Password", label: 'Password', fontSize: 18.0,),
+        CustomTextWidget(
+            "PASSWORD",
+            label: 'password',
+          ),
         customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
       ],
     ),
