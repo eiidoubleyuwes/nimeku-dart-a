@@ -25,7 +25,7 @@ class CustomTextWidget extends StatelessWidget {
         ),
         hintText: hint,
         prefixIcon: Icon(icon),
-        suffixIcon: ispassword? Icon(Icons.visibility): Container(),
+        suffixIcon: ispassword? Icon(Icons.visibility): Container(height: 10,width: 10,),
       ),
       controller: TextEditingController(),
       obscureText: hideText!,
