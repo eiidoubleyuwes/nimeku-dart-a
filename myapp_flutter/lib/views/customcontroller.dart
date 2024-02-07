@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomTextWidget extends StatelessWidget {
-  const CustomTextWidget(String s, {
-    super.key, required String label,
+  final String? hint;
+  const CustomTextWidget(
+    String s, {
+    super.key,
+    required String label,
+    this.hint,
   });
 
   @override
@@ -10,7 +14,7 @@ class CustomTextWidget extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         border: OutlineInputBorder(),
-        hintText: "Enter username",
+        hintText: hint,
       ),
       controller: TextEditingController(),
     );

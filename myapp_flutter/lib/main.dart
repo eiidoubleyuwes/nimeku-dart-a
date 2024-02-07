@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
               ),
       
             customText("Username", label: 'Username', fontSize: 18.0,),
-            CustomTextWidget("Username", label: 'Username',),
+            CustomTextWidget("Username", label: 'Username',hint: "Phone number/Email",),
             SizedBox(
                 height: 10.0,
               ),
