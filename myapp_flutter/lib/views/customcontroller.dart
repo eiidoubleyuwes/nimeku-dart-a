@@ -4,12 +4,14 @@ import 'package:myapp_flutter/configs/constants.dart';
 class CustomTextWidget extends StatelessWidget {
   final String? hint;
   final IconData? icon;
+  final bool? hideText;
   const CustomTextWidget(
     String s, {
     super.key,
     required String label,
     this.hint,
     this.icon,
+    this.hideText = false,
   });
 
   @override
@@ -23,6 +25,7 @@ class CustomTextWidget extends StatelessWidget {
         prefixIcon: Icon(icon),
       ),
       controller: TextEditingController(),
+      obscureText: hideText!,
     );
   }
 }

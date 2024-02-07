@@ -61,6 +61,7 @@ class Home extends StatelessWidget {
                 label: 'password',
                 hint: "Password",
                 icon: Icons.lock,
+                hideText: true,
               ),
             SizedBox(
                 height: 10.0,

@@ -10,7 +10,8 @@ class customText extends StatelessWidget {
     super.key,
     required this.label,
     this.fontWeight,
-    this.fontSize
+    this.fontSize,
+   
   });
 
   @override
