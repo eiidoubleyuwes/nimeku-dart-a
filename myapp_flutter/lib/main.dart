@@ -37,6 +37,11 @@ class Home extends StatelessWidget {
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //Created a widget for the text
+          customText("Login Screen", label: 'Login Page', fontSize: 34.0 ,fontWeight: FontWeight.bold,),
+          SizedBox(
+              height: 50.0,
+            ),
+
           customText("Username", label: 'Username', fontSize: 18.0,),
           CustomTextWidget("Username", label: 'Username',),
           SizedBox(
