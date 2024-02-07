@@ -30,37 +30,40 @@ class Home extends StatelessWidget {
           fontWeight: FontWeight.bold,
       )
     ),
-    body: Column(
-      // mainAxisAlignment: MainAxisAlignment.center,
-      // crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        //Created a widget for the text
-        customText("Login page",label: 'Login Page', fontWeight: FontWeight.bold,fontSize: 36.0,),
-        customText("Username", label: 'Username', fontSize: 18.0,),
-        CustomTextWidget("Username", label: 'Username',),
-        customText("Password", label: 'Password', fontSize: 18.0,),
-        CustomTextWidget(
-            "PASSWORD",
-            label: 'password',
-          ),
-        customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
-        ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: primaryColor,
-            foregroundColor: appWhiteColor,
-            disabledForegroundColor: appWhiteColor,
-            elevation: 5.0,
-            shadowColor: appWhiteColor,
-            padding: EdgeInsets.all(20.0),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
+    body: Padding(
+      padding: const EdgeInsets.all(100.0),
+      child: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          //Created a widget for the text
+          customText("Login page",label: 'Login Page', fontWeight: FontWeight.bold,fontSize: 36.0,),
+          customText("Username", label: 'Username', fontSize: 18.0,),
+          CustomTextWidget("Username", label: 'Username',),
+          customText("Password", label: 'Password', fontSize: 18.0,),
+          CustomTextWidget(
+              "PASSWORD",
+              label: 'password',
             ),
-          ),
-          onPressed: () {
-            print('Button clicked');
-          }, child: Text('Login'),
-        )
-      ],
+          customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: primaryColor,
+              foregroundColor: appWhiteColor,
+              disabledForegroundColor: appWhiteColor,
+              elevation: 5.0,
+              shadowColor: appWhiteColor,
+              padding: EdgeInsets.all(20.0),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+            ),
+            onPressed: () {
+              print('Button clicked');
+            }, child: Text('Login'),
+          )
+        ],
+      ),
     ),
     );
   }
