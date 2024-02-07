@@ -38,28 +38,35 @@ class Home extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             //Created a widget for the text
-            customText("Login Screen", label: 'Login Page', fontSize: 34.0 ,fontWeight: FontWeight.bold,),
+            customText("Login Screen", label: 'Login Page', fontSize: FontSize(34.0), fontWeight: FontWeight.bold,),
             SizedBox(
                 height: 50.0,
               ),
       
-            customText("Username", label: 'Username', fontSize: 18.0,),
-            CustomTextWidget("Username", label: 'Username',hint: "Phone number/Email",),
+            customText("Username", label: 'Username', fontSize: FontSize(18.0),),
+            CustomTextWidget(
+              "Username", 
+              label: 'Username',
+              hint: "Phone number/Email",
+              icon: Icons.person,
+              
+              ),
             SizedBox(
                 height: 10.0,
               ),
       
-            customText("Password", label: 'Password', fontSize: 18.0,),
+            customText("Password", label: 'Password', fontSize: FontSize(18.0),),
             CustomTextWidget(
                 "PASSWORD",
                 label: 'password',
                 hint: "Password",
+                icon: Icons.lock,
               ),
             SizedBox(
                 height: 10.0,
               ),
       
-            customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
+            customText("Forgot password", label: 'Forgot password?', fontSize: FontSize(18.0),),
             SizedBox(
                 height: 10.0,
               ),
