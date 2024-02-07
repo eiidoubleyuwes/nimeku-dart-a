@@ -9,7 +9,8 @@ class CustomTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        border: OutlineInputBorder()
+        border: OutlineInputBorder(),
+        hintText: "Enter username",
       ),
       controller: TextEditingController(),
     );
