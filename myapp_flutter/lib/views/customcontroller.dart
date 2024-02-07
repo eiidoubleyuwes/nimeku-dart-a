@@ -15,6 +15,7 @@ class CustomTextWidget extends StatelessWidget {
       decoration: InputDecoration(
         border: OutlineInputBorder(),
         hintText: hint,
+        prefixIcon: Icon(Icons.person),
       ),
       controller: TextEditingController(),
     );

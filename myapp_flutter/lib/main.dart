@@ -53,6 +53,7 @@ class Home extends StatelessWidget {
             CustomTextWidget(
                 "PASSWORD",
                 label: 'password',
+                hint: "Password",
               ),
             SizedBox(
                 height: 10.0,
