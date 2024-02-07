@@ -37,15 +37,26 @@ class Home extends StatelessWidget {
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //Created a widget for the text
-          customText("Login page",label: 'Login Page', fontWeight: FontWeight.bold,fontSize: 36.0,),
           customText("Username", label: 'Username', fontSize: 18.0,),
           CustomTextWidget("Username", label: 'Username',),
+          SizedBox(
+              height: 10.0,
+            ),
+
           customText("Password", label: 'Password', fontSize: 18.0,),
           CustomTextWidget(
               "PASSWORD",
               label: 'password',
             ),
+          SizedBox(
+              height: 10.0,
+            ),
+
           customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
+          SizedBox(
+              height: 10.0,
+            ),
+
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: primaryColor,
