@@ -46,9 +46,9 @@ class Home extends StatelessWidget {
         customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: primaryColor,
-            onPrimary: appWhiteColor,
-            onSurface: appWhiteColor,
+            backgroundColor: primaryColor,
+            foregroundColor: appWhiteColor,
+            disabledForegroundColor: appWhiteColor,
             elevation: 5.0,
             shadowColor: appWhiteColor,
             padding: EdgeInsets.all(20.0),
