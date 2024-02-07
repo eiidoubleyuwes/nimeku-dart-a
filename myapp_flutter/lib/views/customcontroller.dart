@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp_flutter/configs/constants.dart';
 
 class CustomTextWidget extends StatelessWidget {
   final String? hint;
@@ -15,7 +16,9 @@ class CustomTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0),
+        borderSide: BorderSide(color: primaryColor, width: 2.0),
+        ),
         hintText: hint,
         prefixIcon: Icon(icon),
       ),
