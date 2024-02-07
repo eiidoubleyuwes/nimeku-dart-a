@@ -1,5 +1,4 @@
 import 'dart:collection';
-
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
 import 'package:myapp_flutter/views/customcontroller.dart';

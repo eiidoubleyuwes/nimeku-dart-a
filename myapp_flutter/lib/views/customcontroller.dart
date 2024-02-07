@@ -8,6 +8,9 @@ class CustomTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      decoration: InputDecoration(
+        border: OutlineInputBorder()
+      ),
       controller: TextEditingController(),
     );
   }
