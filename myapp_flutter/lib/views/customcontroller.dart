@@ -23,6 +23,7 @@ class CustomTextWidget extends StatelessWidget {
         ),
         hintText: hint,
         prefixIcon: Icon(icon),
+        suffixIcon: Icon(Icons.visibility_off),
       ),
       controller: TextEditingController(),
       obscureText: hideText!,
