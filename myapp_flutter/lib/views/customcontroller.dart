@@ -5,6 +5,7 @@ class CustomTextWidget extends StatelessWidget {
   final String? hint;
   final IconData? icon;
   final bool? hideText;
+  final bool ispassword;
   const CustomTextWidget(
     String s, {
     super.key,
@@ -12,6 +13,7 @@ class CustomTextWidget extends StatelessWidget {
     this.hint,
     this.icon,
     this.hideText = false,
+    this.ispassword = false,
   });
 
   @override
@@ -23,7 +25,7 @@ class CustomTextWidget extends StatelessWidget {
         ),
         hintText: hint,
         prefixIcon: Icon(icon),
-        suffixIcon: Icon(Icons.visibility_off),
+        suffixIcon: ispassword? Icon(Icons.visibility_off): Container(),
       ),
       controller: TextEditingController(),
       obscureText: hideText!,
