@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
           children: [
             //Created a widget for the text
             Image.asset("assets/images/mylogo.png", height: 100, width: 100,),
-            customText("Login Screen", label: 'Login Page', fontSize: FontSize(34.0), fontWeight: FontWeight.bold,),
+            customText("Login Screen", label: 'Login Page', fontSize: FontSize(24.0), fontWeight: FontWeight.bold,),
             SizedBox(
                 height: 10.0,
               ),
