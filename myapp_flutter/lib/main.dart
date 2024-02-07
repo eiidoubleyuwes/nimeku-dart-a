@@ -16,7 +16,8 @@ class Home extends StatelessWidget {
   const Home({super.key});
   @override
   Widget build(BuildContext context) {
-  TextEditingController textController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
     return Scaffold(
         appBar: AppBar(
@@ -30,55 +31,57 @@ class Home extends StatelessWidget {
           fontWeight: FontWeight.bold,
       )
     ),
-    body: Padding(
-      padding: const EdgeInsets.all(100.0),
-      child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          //Created a widget for the text
-          customText("Login Screen", label: 'Login Page', fontSize: 34.0 ,fontWeight: FontWeight.bold,),
-          SizedBox(
-              height: 50.0,
-            ),
-
-          customText("Username", label: 'Username', fontSize: 18.0,),
-          CustomTextWidget("Username", label: 'Username',),
-          SizedBox(
-              height: 10.0,
-            ),
-
-          customText("Password", label: 'Password', fontSize: 18.0,),
-          CustomTextWidget(
-              "PASSWORD",
-              label: 'password',
-            ),
-          SizedBox(
-              height: 10.0,
-            ),
-
-          customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
-          SizedBox(
-              height: 10.0,
-            ),
-
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: primaryColor,
-              foregroundColor: appWhiteColor,
-              disabledForegroundColor: appWhiteColor,
-              elevation: 5.0,
-              shadowColor: appWhiteColor,
-              padding: EdgeInsets.all(20.0),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
+    body: Center(
+      child: Padding(
+        padding: const EdgeInsets.all(100.0),
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          // crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            //Created a widget for the text
+            customText("Login Screen", label: 'Login Page', fontSize: 34.0 ,fontWeight: FontWeight.bold,),
+            SizedBox(
+                height: 50.0,
               ),
-            ),
-            onPressed: () {
-              print('Button clicked');
-            }, child: Text('Login'),
-          )
-        ],
+      
+            customText("Username", label: 'Username', fontSize: 18.0,),
+            CustomTextWidget("Username", label: 'Username',),
+            SizedBox(
+                height: 10.0,
+              ),
+      
+            customText("Password", label: 'Password', fontSize: 18.0,),
+            CustomTextWidget(
+                "PASSWORD",
+                label: 'password',
+              ),
+            SizedBox(
+                height: 10.0,
+              ),
+      
+            customText("Forgot password", label: 'Forgot password?', fontSize: 18.0,),
+            SizedBox(
+                height: 10.0,
+              ),
+      
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: primaryColor,
+                foregroundColor: appWhiteColor,
+                disabledForegroundColor: appWhiteColor,
+                elevation: 5.0,
+                shadowColor: appWhiteColor,
+                padding: EdgeInsets.all(20.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              onPressed: () {
+                print('Button clicked');
+              }, child: Text('Login'),
+            )
+          ],
+        ),
       ),
     ),
     );
