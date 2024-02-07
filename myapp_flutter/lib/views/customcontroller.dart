@@ -15,7 +15,7 @@ class CustomTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
         hintText: hint,
         prefixIcon: Icon(icon),
       ),
