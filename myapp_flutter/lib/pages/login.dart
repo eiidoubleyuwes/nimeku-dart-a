@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-          title: Text('App ya mine'),
+          title: Text('Formula Dart'),
           centerTitle: true,
           backgroundColor: primaryColor,
           foregroundColor: appWhiteColor,

@@ -10,7 +10,7 @@ class RegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('App ya mine'),
+          title: Text('Formula Dart'),
           centerTitle: true,
           backgroundColor: primaryColor,
           foregroundColor: appWhiteColor,
