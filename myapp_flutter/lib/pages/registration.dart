@@ -47,8 +47,22 @@ class RegistrationPage extends StatelessWidget {
                 CustomTextWidget(
                   "Username",
                   label: 'Username',
-                  hint: "Phone number/Email",
+                  hint: "Username",
                   icon: Icons.person,
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                customText(
+                  "Phome number/email",
+                  label: 'Phone number/email',
+                  fontSize: FontSize(18.0),
+                ),
+                CustomTextWidget(
+                  "Phone number/email",
+                  label: 'Phone number/email',
+                  hint: "Phone number/Email",
+                  icon: Icons.phone,
                 ),
                 SizedBox(
                   height: 10.0,
