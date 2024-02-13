@@ -4,7 +4,8 @@ import 'package:myapp_flutter/configs/constants.dart';
 class custombutton extends StatelessWidget {
   const custombutton({
     super.key,
-    required this.usernameController,
+    required this.usernameController, 
+    // ignore: non_constant_identifier_names
   });
 
   final TextEditingController usernameController;
