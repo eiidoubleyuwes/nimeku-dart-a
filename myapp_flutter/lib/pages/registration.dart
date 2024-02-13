@@ -70,6 +70,22 @@ class RegistrationPage extends StatelessWidget {
                 SizedBox(
                   height: 10.0,
                 ),
+                customText(
+                  "Retype Password",
+                  label: 'Retype Password',
+                  fontSize: FontSize(18.0),
+                ),
+                CustomTextWidget(
+                  "PASSWORD",
+                  label: 'password',
+                  hint: "Password",
+                  icon: Icons.lock,
+                  hideText: true,
+                  ispassword: true,
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
 
                 customText(
                   "We love you here",
