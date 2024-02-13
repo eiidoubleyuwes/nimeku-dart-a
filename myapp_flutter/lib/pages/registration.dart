@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
+import 'package:myapp_flutter/views/custombutton.dart';
 import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
 
@@ -78,12 +79,7 @@ class RegistrationPage extends StatelessWidget {
                   height: 10.0,
                 ),
 
-                custombutton(usernameController: usernameController),
-                 SizedBox(
-                  height: 10.0,
-                ),
-
-                //Button to navigate to the registration page
+                //Button to navigate to the login page
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => RegistrationPage()));
