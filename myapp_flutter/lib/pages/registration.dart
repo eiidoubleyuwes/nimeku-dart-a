@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
+import 'package:myapp_flutter/pages/login.dart';
 import 'package:myapp_flutter/views/custombutton.dart';
 import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
@@ -7,7 +8,7 @@ import 'package:myapp_flutter/views/customtexts.dart';
 class RegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
       appBar: AppBar(
           title: Text('App ya mine'),
           centerTitle: true,
@@ -71,8 +72,8 @@ class RegistrationPage extends StatelessWidget {
                 ),
 
                 customText(
-                  "Forgot password",
-                  label: 'Forgot password?',
+                  "We love you here",
+                  label: 'Welcome to the start of somthing beautiful',
                   fontSize: FontSize(18.0),
                 ),
                 SizedBox(
@@ -82,7 +83,8 @@ class RegistrationPage extends StatelessWidget {
                 //Button to navigate to the login page
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => RegistrationPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()));
                   },
                   child: Text('Register for an account'),
                 ),
