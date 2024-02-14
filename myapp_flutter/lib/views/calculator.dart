@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/views/custombutton.dart';
+import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
 
 class Calculator extends StatefulWidget {
@@ -15,10 +16,23 @@ class _CalculatorState extends State<Calculator> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(body: Column(children: [
-      customText("number", controller: number, label: "Enter Number 1"),
-      customText("number", controller: number, label: "Enter Number 2"),
-      custombutton(label: "Sum", usernameController: num, ),
-    ],));
+    return  Scaffold(body: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(children: [
+        customText("number", controller: number, label: "Enter Number 1"),
+        SizedBox(height: 20.0),
+        CustomTextWidget("Number 1", label: 'Number 1', controller: number ),
+        SizedBox(height: 20.0),
+        customText("number", controller: num, label: "Enter Number 2"),
+        SizedBox(height: 20.0),
+        CustomTextWidget("Number 2", label: 'Number 2' ,controller: num,),
+        SizedBox(height: 20.0),
+        custombutton(label: "Sum", usernameController: num, ),
+        SizedBox(height: 20.0),
+
+        customText("sum", label: 'Your sum:')
+        
+      ],),
+    ));
   }
 }
