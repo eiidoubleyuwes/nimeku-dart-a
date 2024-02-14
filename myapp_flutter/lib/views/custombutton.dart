@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
 
 class custombutton extends StatelessWidget {
+  final TextEditingController? controller;
   const custombutton({
     super.key,
-     required this.usernameController, required String label, 
+    String? label,
+    this.controller, 
     // ignore: non_constant_identifier_names
   });
 
-  final TextEditingController usernameController;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class custombutton extends StatelessWidget {
       ),
       onPressed: () {
         //Anonymous function ie function with no name
-        print('Button clicked ${usernameController.text}');
+        print('Button clicked');
       },
       child: Text('Sum'),
     );

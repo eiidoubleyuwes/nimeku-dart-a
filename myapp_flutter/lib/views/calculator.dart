@@ -21,11 +21,19 @@ class _CalculatorState extends State<Calculator> {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: [
-          customText("number", label: "Enter Number 1", controller: number,),
+          customText(
+            "number",
+            label: "Enter Number 1",
+            controller: number,
+          ),
           SizedBox(height: 20.0),
           CustomTextWidget("Number 1", label: 'Number 1', controller: number),
           SizedBox(height: 20.0),
-          customText("number", label: "Enter Number 2", controller: num,),
+          customText(
+            "number",
+            label: "Enter Number 2",
+            controller: num,
+          ),
           SizedBox(height: 20.0),
           CustomTextWidget(
             "Number 2",
@@ -36,10 +44,14 @@ class _CalculatorState extends State<Calculator> {
           // custombutton(label: "Sum", usernameController: num, ),
           ElevatedButton(
               onPressed: () {
+                number.clear();
+                num.clear();
                 double a = double.parse(number.text);
                 double b = double.parse(num.text);
-                sum = a + b;
-                print("Sum: $sum");
+                
+                setState(() {
+                  sum = a + b;
+                });
               },
               child: Text('Calculate')),
           SizedBox(height: 20.0),
