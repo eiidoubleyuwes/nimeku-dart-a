@@ -29,7 +29,7 @@ class CustomTextWidget extends StatelessWidget {
         prefixIcon: Icon(icon),
         suffixIcon: ispassword? Icon(Icons.visibility): Container(height: 10,width: 10,),
       ),
-      controller: TextEditingController(),
+      controller: controller,
       obscureText: hideText!,
     );
   }
