@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
+import 'package:get/state_manager.dart';
+import 'package:myapp_flutter/controllers/calculatorcontroller.dart';
 import 'package:myapp_flutter/views/custombutton.dart';
 import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
 
-class Calculator extends StatefulWidget {
-  const Calculator({super.key});
 
-  @override
-  State<Calculator> createState() => _CalculatorState();
-}
-
-class _CalculatorState extends State<Calculator> {
+class Calculator extends StatelessWidget {
   TextEditingController number = TextEditingController();
   TextEditingController num = TextEditingController();
+  calculatorcontroller calculatorController = Get.put(calculatorcontroller());
+
   double sum = 0.0;
   @override
   Widget build(BuildContext context) {
@@ -44,19 +43,20 @@ class _CalculatorState extends State<Calculator> {
           // custombutton(label: "Sum", usernameController: num, ),
           ElevatedButton(
               onPressed: () {
-                number.clear();
-                num.clear();
                 double a = double.parse(number.text);
                 double b = double.parse(num.text);
-                
-                setState(() {
-                  sum = a + b;
-                });
+
+                double s = a + b;
+                //Send the value to Sum in the other class
+                calculatorController.updateSum(s);
+
+                num.text = "";
+                number.text = "";
               },
               child: Text('Calculate')),
-          SizedBox(height: 20.0),
+           SizedBox(height: 20.0),
 
-          customText("sum", label: 'Your sum: $sum')
+          Obx(()=> customText("sum", label: 'Your sum: ${calculatorController.sum.value}')),
         ],
       ),
     ));
