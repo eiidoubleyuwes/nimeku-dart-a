@@ -103,7 +103,7 @@ class RegistrationPage extends StatelessWidget {
 
                 customText(
                   "We love you here",
-                  label: 'Welcome to the start of somthing beautiful',
+                  label: 'Welcome to the start of something beautiful',
                   fontSize: FontSize(18.0),
                 ),
                 SizedBox(
@@ -114,7 +114,7 @@ class RegistrationPage extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home()));
+                        MaterialPageRoute(builder: (context) => Login()));
                   },
                   child: Text('Register for an account'),
                 ),

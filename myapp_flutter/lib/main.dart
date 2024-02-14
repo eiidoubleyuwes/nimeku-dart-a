@@ -9,7 +9,7 @@ import 'package:myapp_flutter/views/customtexts.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Home(),
+    home: Login(),
     debugShowCheckedModeBanner: false,
     
   ));

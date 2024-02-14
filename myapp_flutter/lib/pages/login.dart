@@ -5,8 +5,8 @@ import 'package:myapp_flutter/views/custombutton.dart';
 import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
   @override
   Widget build(BuildContext context) {
     TextEditingController usernameController = TextEditingController();
