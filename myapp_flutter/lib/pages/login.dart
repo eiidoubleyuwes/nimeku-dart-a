@@ -57,6 +57,7 @@ class Login extends StatelessWidget {
                   label: 'Username',
                   hint: "Phone number/Email",
                   icon: Icons.person,
+                  controller: usernameController,
                 ),
                 SizedBox(
                   height: 10.0,
@@ -74,6 +75,7 @@ class Login extends StatelessWidget {
                   icon: Icons.lock,
                   hideText: true,
                   ispassword: true,
+                  controller: passwordController,
                 ),
                 SizedBox(
                   height: 10.0,

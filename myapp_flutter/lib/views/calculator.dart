@@ -16,26 +16,37 @@ class _CalculatorState extends State<Calculator> {
   double sum = 0.0;
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(body: Padding(
+    return Scaffold(
+        body: Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Column(children: [
-        customText("number", controller: number, label: "Enter Number 1"),
-        SizedBox(height: 20.0),
-        CustomTextWidget("Number 1", label: 'Number 1', controller: number ),
-        SizedBox(height: 20.0),
-        customText("number", controller: num, label: "Enter Number 2"),
-        SizedBox(height: 20.0),
-        CustomTextWidget("Number 2", label: 'Number 2' ,controller: num,),
-        SizedBox(height: 20.0),
-        // custombutton(label: "Sum", usernameController: num, ),
-        ElevatedButton(onPressed: () {
-          print('Button clicked');
-        }, child: Text('Calculate')),
-        SizedBox(height: 20.0),
+      child: Column(
+        children: [
+          customText("number", label: "Enter Number 1", controller: number,),
+          SizedBox(height: 20.0),
+          CustomTextWidget("Number 1", label: 'Number 1', controller: number),
+          SizedBox(height: 20.0),
+          customText("number", label: "Enter Number 2", controller: num,),
+          SizedBox(height: 20.0),
+          CustomTextWidget(
+            "Number 2",
+            label: 'Number 2',
+            controller: num,
+          ),
+          SizedBox(height: 20.0),
+          // custombutton(label: "Sum", usernameController: num, ),
+          ElevatedButton(
+              onPressed: () {
+                double a = double.parse(number.text);
+                double b = double.parse(num.text);
+                sum = a + b;
+                print("Sum: $sum");
+              },
+              child: Text('Calculate')),
+          SizedBox(height: 20.0),
 
-        customText("sum", label: 'Your sum: $sum')
-        
-      ],),
+          customText("sum", label: 'Your sum: $sum')
+        ],
+      ),
     ));
   }
 }
