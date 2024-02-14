@@ -11,8 +11,6 @@ class Calculator extends StatelessWidget {
   TextEditingController number = TextEditingController();
   TextEditingController num = TextEditingController();
   calculatorcontroller calculatorController = Get.put(calculatorcontroller());
-
-  double sum = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +41,8 @@ class Calculator extends StatelessWidget {
           // custombutton(label: "Sum", usernameController: num, ),
           ElevatedButton(
               onPressed: () {
-                double a = double.parse(number.text);
-                double b = double.parse(num.text);
+                double a = double.tryParse(number.text) ?? 0.0;
+                double b = double.tryParse(num.text) ?? 0.0;
 
                 double s = a + b;
                 //Send the value to Sum in the other class
@@ -56,7 +54,7 @@ class Calculator extends StatelessWidget {
               child: Text('Calculate')),
            SizedBox(height: 20.0),
 
-          Obx(()=> customText("sum", label: 'Your sum: ${calculatorController.sum.value}')),
+          Obx(()=> customText("sum", label: "Your sum: ${calculatorController.sum}")),
         ],
       ),
     ));
