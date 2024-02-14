@@ -13,7 +13,7 @@ class Calculator extends StatefulWidget {
 class _CalculatorState extends State<Calculator> {
   TextEditingController number = TextEditingController();
   TextEditingController num = TextEditingController();
-
+  double sum = 0.0;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(body: Padding(
@@ -33,7 +33,7 @@ class _CalculatorState extends State<Calculator> {
         }, child: Text('Calculate')),
         SizedBox(height: 20.0),
 
-        customText("sum", label: 'Your sum:')
+        customText("sum", label: 'Your sum: $sum')
         
       ],),
     ));
