@@ -27,7 +27,10 @@ class _CalculatorState extends State<Calculator> {
         SizedBox(height: 20.0),
         CustomTextWidget("Number 2", label: 'Number 2' ,controller: num,),
         SizedBox(height: 20.0),
-        custombutton(label: "Sum", usernameController: num, ),
+        // custombutton(label: "Sum", usernameController: num, ),
+        ElevatedButton(onPressed: () {
+          print('Button clicked');
+        }, child: Text('Calculate')),
         SizedBox(height: 20.0),
 
         customText("sum", label: 'Your sum:')
