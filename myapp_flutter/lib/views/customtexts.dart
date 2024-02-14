@@ -5,12 +5,14 @@ class customText extends StatelessWidget {
   final FontWeight? fontWeight;
   final FontSize? fontSize;
   final String label;
+  final TextEditingController? controller;
   customText(
     String s, {
     super.key,
     required this.label,
     this.fontWeight,
-    this.fontSize,
+    this.fontSize, 
+    this.controller,
    
   });
 

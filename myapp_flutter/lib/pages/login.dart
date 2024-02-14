@@ -50,7 +50,7 @@ class Login extends StatelessWidget {
                 customText(
                   "Username",
                   label: 'Username',
-                  fontSize: FontSize(18.0),
+                  fontSize: FontSize(18.0), 
                 ),
                 CustomTextWidget(
                   "Username",
@@ -88,7 +88,7 @@ class Login extends StatelessWidget {
                   height: 10.0,
                 ),
 
-                custombutton(usernameController: usernameController),
+                custombutton(usernameController: usernameController, label: 'Button',),
                  SizedBox(
                   height: 10.0,
                 ),

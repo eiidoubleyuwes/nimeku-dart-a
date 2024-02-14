@@ -4,7 +4,7 @@ import 'package:myapp_flutter/configs/constants.dart';
 class custombutton extends StatelessWidget {
   const custombutton({
     super.key,
-    required this.usernameController, 
+     required this.usernameController, required String label, 
     // ignore: non_constant_identifier_names
   });
 
@@ -28,7 +28,7 @@ class custombutton extends StatelessWidget {
         //Anonymous function ie function with no name
         print('Button clicked ${usernameController.text}');
       },
-      child: Text('Login'),
+      child: Text('Sum'),
     );
   }
 }
