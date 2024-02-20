@@ -41,6 +41,7 @@ class Dashboard extends StatelessWidget {
           )),
       body: Column(
         children: [
+          SizedBox(height: 20.0),
           // F1 News Section
           Expanded(
             child: ListView.builder(
