@@ -5,70 +5,71 @@ import 'package:myapp_flutter/views/newscards.dart';
 class Dashboard extends StatelessWidget {
   final List<NewsCard> news = [
     NewsCard(
-      title: "Hamilton Wins Dramatic Race in Spain",
+      title: "Pierre Gasly Wins Dramatic Race in Spain",
       subtitle: "Verstappen crashes out on final lap",
-      imageUrl: "https://example.com/hamilton-win.jpg",
+      imageUrl: "assets/images/alpine.png",
     ),
     NewsCard(
       title: "Leclerc Takes Pole Position in Monaco",
       subtitle: "Sainz crashes in Q3",
-      imageUrl: "https://example.com/leclerc-pole.jpg",
+      imageUrl: "assets/images/logo-ferrari-18-.png",
     ),
-    // Add more news cards here
+    NewsCard(
+      title: "Hamilton Wins in Silverstone",
+      subtitle: "Verstappen frustrated after collision",
+      imageUrl: "assets/images/mercedes.jpg",
+    ),
+    NewsCard(
+      title: "Vettel Wins in Hungary",
+      subtitle: "First win for Him back at Red Bull",
+      imageUrl: "assets/images/red-bull.png",
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Formula Dart'),
-        centerTitle: true,
-        backgroundColor: primaryColor,
-        foregroundColor: appWhiteColor,
-         titleTextStyle: TextStyle(
+          title: Text('Formula Dart'),
+          centerTitle: true,
+          backgroundColor: primaryColor,
+          foregroundColor: appWhiteColor,
+          titleTextStyle: TextStyle(
             color: headercolor,
             fontSize: 34.0,
             fontWeight: FontWeight.bold,
-          )
-      ),
+          )),
       body: Column(
         children: [
           // F1 News Section
           Expanded(
-           child: ListView.builder(
-            scrollDirection: Axis.vertical,
+            child: ListView.builder(
+              scrollDirection: Axis.vertical,
               itemCount: news.length,
               itemBuilder: (context, index) {
                 return NewsCardWidget(news[index]);
               },
             ),
           ),
-          // F1 Team Logos Section
-          Container(
-            height: 100,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: f1TeamLogos.length,
-              itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset(f1TeamLogos[index]),
-                );
-              },
-            ),
-          ),
-          
         ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+        selectedItemColor: primaryColor,
       ),
     );
   }
 }
-
-// Sample data for F1 news and team logos
-
-
-List<String> f1TeamLogos = [
-  'assets/images/alpine.png',
-  'assets/images/logo-ferrari-18-.png',
-  'assets/images/red-bull.png',
-];
