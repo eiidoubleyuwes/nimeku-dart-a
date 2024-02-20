@@ -45,3 +45,20 @@ class DashboardPage extends StatelessWidget {
     );
   }
 }
+
+// Sample data for F1 news and team logos
+List<String> f1News = [
+  'News 1',
+  'News 2',
+  'News 3',
+  'News 4',
+  'News 5',
+];
+
+List<String> f1TeamLogos = [
+  'assets/team1_logo.png',
+  'assets/team2_logo.png',
+  'assets/team3_logo.png',
+  'assets/team4_logo.png',
+  'assets/team5_logo.png',
+];
