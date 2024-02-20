@@ -5,7 +5,7 @@ import 'package:myapp_flutter/pages/login.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Dashboard(),
+    home: Login(),
     debugShowCheckedModeBanner: false,
     
   ));
