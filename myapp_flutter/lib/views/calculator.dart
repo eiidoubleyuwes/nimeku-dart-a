@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 import 'package:get/state_manager.dart';
 import 'package:myapp_flutter/controllers/calculatorcontroller.dart';
-import 'package:myapp_flutter/views/custombutton.dart';
+// import 'package:myapp_flutter/views/custombutton.dart';
 import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
 
@@ -52,8 +52,8 @@ class Calculator extends StatelessWidget {
                 calculatorController.updateNumber2(newNumber2);
                 calculatorController.updateName("Baraka");
 
-                num.text = "";
-                number.text = "";
+                // num.text = "";
+                // number.text = "";
               },
               child: Text('Calculate')),
           SizedBox(height: 20.0),

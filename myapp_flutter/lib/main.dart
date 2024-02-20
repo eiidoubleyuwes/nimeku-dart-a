@@ -5,7 +5,7 @@ import 'package:myapp_flutter/views/calculator.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Calculator(),
+    home: Login(),
     debugShowCheckedModeBanner: false,
     
   ));
