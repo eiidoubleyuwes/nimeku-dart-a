@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
-class DashboardPage extends StatelessWidget {
+class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('F1 Dashboard'),
+        title: Text('Formula Dart'),
+        centerTitle: true,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
       ),
       body: Column(
         children: [
@@ -48,17 +51,13 @@ class DashboardPage extends StatelessWidget {
 
 // Sample data for F1 news and team logos
 List<String> f1News = [
-  'News 1',
-  'News 2',
-  'News 3',
-  'News 4',
-  'News 5',
+  'Lewis Hamilton moves to Ferrari',
+  'Sebastian Vettel signs for Audi for 2026',
+  'Christian Horner to retire from Red Bull Racing',
 ];
 
 List<String> f1TeamLogos = [
   'assets/team1_logo.png',
   'assets/team2_logo.png',
   'assets/team3_logo.png',
-  'assets/team4_logo.png',
-  'assets/team5_logo.png',
 ];
