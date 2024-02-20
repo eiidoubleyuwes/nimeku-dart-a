@@ -12,6 +12,25 @@ class Dashboard extends StatelessWidget {
       ),
       body: Column(
         children: [
+          // F1 Team Logos Section
+          Container(
+            height: 100,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              //Automatically scroll
+            controller: ScrollController(initialScrollOffset: 100.0),
+              itemCount: f1TeamLogos.length,
+              itemBuilder: (context, index) {
+                return Card(
+                  child: Image.asset(
+                    f1TeamLogos[index],
+                    width: 100,
+                    height: 100,
+                  ),
+                );
+              },
+            ),
+          ),
           // F1 News Section
           Expanded(
             child: Container(
@@ -24,23 +43,6 @@ class Dashboard extends StatelessWidget {
                   );
                 },
               ),
-            ),
-          ),
-          // F1 Team Logos Section
-          Container(
-            height: 100,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: f1TeamLogos.length,
-              itemBuilder: (context, index) {
-                return Card(
-                  child: Image.asset(
-                    f1TeamLogos[index],
-                    width: 100,
-                    height: 100,
-                  ),
-                );
-              },
             ),
           ),
         ],
@@ -57,7 +59,7 @@ List<String> f1News = [
 ];
 
 List<String> f1TeamLogos = [
-  'assets/team1_logo.png',
-  'assets/team2_logo.png',
-  'assets/team3_logo.png',
+  'assets/alpine.png',
+  'assets/logo-ferrari.png',
+  'assets/red-bull.png',
 ];
