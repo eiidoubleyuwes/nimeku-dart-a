@@ -97,6 +97,7 @@ class Login extends StatelessWidget {
 
                 //Button to navigate to the registration page
                 ElevatedButton(
+                  
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => RegistrationPage()));
                   },

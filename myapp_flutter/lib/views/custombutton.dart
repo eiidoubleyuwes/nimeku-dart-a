@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
+import 'package:myapp_flutter/pages/dashboard.dart';
 
 class custombutton extends StatelessWidget {
   final TextEditingController? controller;
@@ -26,8 +27,8 @@ class custombutton extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        //Anonymous function ie function with no name
-        print('Button clicked');
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => Dashboard()));
       },
       child: Text('Login'),
     );
