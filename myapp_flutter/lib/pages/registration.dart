@@ -111,6 +111,17 @@ class RegistrationPage extends StatelessWidget {
 
                 //Button to navigate to the login page
                 ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: primaryColor,
+                    foregroundColor: appWhiteColor,
+                    disabledForegroundColor: appWhiteColor,
+                    elevation: 5.0,
+                    shadowColor: appWhiteColor,
+                    padding: EdgeInsets.all(20.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => Login()));
