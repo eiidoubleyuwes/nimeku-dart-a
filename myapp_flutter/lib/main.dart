@@ -1,6 +1,7 @@
 import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/pages/dashboard.dart';
+import 'package:myapp_flutter/pages/dashborad2.dart';
 import 'package:myapp_flutter/pages/login.dart';
 import 'package:myapp_flutter/views/calculator.dart';
 
