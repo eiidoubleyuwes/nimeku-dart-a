@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp_flutter/configs/constants.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -14,8 +15,15 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
-      ),
+        title: Text('Formula Dart'),
+          centerTitle: true,
+          backgroundColor: primaryColor,
+          foregroundColor: appWhiteColor,
+          titleTextStyle: TextStyle(
+            color: headercolor,
+            fontSize: 34.0,
+            fontWeight: FontWeight.bold,
+          )),
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: [
