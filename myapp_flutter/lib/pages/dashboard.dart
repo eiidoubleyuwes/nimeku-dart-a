@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
-import 'package:myapp_flutter/pages/settings.dart';
 import 'package:myapp_flutter/views/newscards.dart';
 
 class Dashboard extends StatelessWidget {
