@@ -1,16 +1,12 @@
-# myapp_flutter
+Hello,this is a simple app I built with flutter as a newbie
 
-A new Flutter project.
+The app looks shody,but I'll do my best to make it look cool
 
-## Getting Started
+The login page so far:
 
-This project is a starting point for a Flutter application.
+![Screenshot from 2024-02-20 21-56-15](https://github.com/eiidoubleyuwes/you-make-my-heart-flutter/assets/148796574/bfeac85e-bc73-4f51-ad45-3dac0174b642)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The Home page/Dashboard
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot from 2024-02-20 21-56-34](https://github.com/eiidoubleyuwes/you-make-my-heart-flutter/assets/148796574/6f3217c1-9f25-4be6-b221-15b86a3f2b37)
