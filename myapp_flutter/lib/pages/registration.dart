@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp_flutter/configs/constants.dart';
 import 'package:myapp_flutter/pages/login.dart';
+import 'package:myapp_flutter/views/custombutton.dart';
 import 'package:myapp_flutter/views/customcontroller.dart';
 import 'package:myapp_flutter/views/customtexts.dart';
 
@@ -9,6 +11,7 @@ class RegistrationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: true,
           title: Text('Formula Dart'),
           centerTitle: true,
           backgroundColor: primaryColor,
@@ -21,14 +24,14 @@ class RegistrationPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(100.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 //Created a widget for the text
                 Image.asset(
-                  "assets/images/mylogo.png",
+                  "assets/images/applogo.png",
                   height: 200,
                   width: 300,
                 ),
@@ -100,33 +103,15 @@ class RegistrationPage extends StatelessWidget {
                   height: 10.0,
                 ),
 
-                customText(
-                  "We love you here",
-                  label: 'Welcome to the start of something beautiful',
-                  fontSize: FontSize(18.0),
-                ),
                 SizedBox(
                   height: 10.0,
                 ),
 
                 //Button to navigate to the login page
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: primaryColor,
-                    foregroundColor: appWhiteColor,
-                    disabledForegroundColor: appWhiteColor,
-                    elevation: 5.0,
-                    shadowColor: appWhiteColor,
-                    padding: EdgeInsets.all(20.0),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Login()));
-                  },
-                  child: Text('Register for an account'),
+                custombutton(
+                  label: 'Register',
+                  labelColor: appWhiteColor,
+                  action: () => Get.toNamed("/login"),
                 ),
               ],
             ),

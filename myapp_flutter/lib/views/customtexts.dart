@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
 
 class customText extends StatelessWidget {
+  final String label;
   final FontWeight? fontWeight;
   final FontSize? fontSize;
-  final String label;
   final TextEditingController? controller;
+  final Color? color;
   customText(
     String s, {
     super.key,
@@ -13,7 +14,7 @@ class customText extends StatelessWidget {
     this.fontWeight,
     this.fontSize, 
     this.controller,
-   
+    this.color,
   });
 
   @override

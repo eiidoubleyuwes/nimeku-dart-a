@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp_flutter/configs/constants.dart';
+import 'package:myapp_flutter/views/custombutton.dart';
+import 'package:myapp_flutter/views/customtexts.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -9,56 +12,56 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   bool _darkModeEnabled = false;
   bool _notificationsEnabled = true;
-  double _fontSize = 16.0;
+
+  final damn = const Color(0xFFEC0023); // F1 Red
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Formula Dart'),
-          centerTitle: true,
-          backgroundColor: primaryColor,
-          foregroundColor: appWhiteColor,
-          titleTextStyle: TextStyle(
-            color: headercolor,
-            fontSize: 34.0,
-            fontWeight: FontWeight.bold,
-          )),
-      body: ListView(
-        padding: EdgeInsets.all(16.0),
-        children: [
-          SwitchListTile(
-            title: Text('Dark Mode'),
-            value: _darkModeEnabled,
-            onChanged: (value) {
-              setState(() {
-                _darkModeEnabled = value;
-              });
-            },
-          ),
-          SwitchListTile(
-            title: Text('Notifications'),
-            value: _notificationsEnabled,
-            onChanged: (value) {
-              setState(() {
-                _notificationsEnabled = value;
-              });
-            },
-          ),
-          Slider(
-            value: _fontSize,
-            min: 12.0,
-            max: 24.0,
-            divisions: 6,
-            onChanged: (value) {
-              setState(() {
-                _fontSize = value;
-              });
-            },
-            label: 'Font Size: $_fontSize',
-          ),
-        ],
-      ),
+    return ListView.builder(
+      padding: EdgeInsets.all(16.0),
+      itemCount: 3, // Assuming only two SwitchListTile items
+      itemBuilder: (context, index) {
+        switch (index) {
+          case 0:
+            return SwitchListTile(
+              title: customText(
+                "Dark Mode", // Changed "Dark Mode" to "Dark Mode
+                label: 'Dark Mode',
+                fontWeight: FontWeight.bold,
+                color: damn,
+              ),
+              value: _darkModeEnabled,
+              onChanged: (value) {
+                setState(() {
+                  _darkModeEnabled = value;
+                });
+              },
+            );
+          case 1:
+            return SwitchListTile(
+              title: customText(
+                "Notifications", // Changed "Notifications" to "Notifications
+                label: 'Notifications',
+                fontWeight: FontWeight.bold,
+                color: damn,
+              ),
+              value: _notificationsEnabled,
+              onChanged: (value) {
+                setState(() {
+                  _notificationsEnabled = value;
+                });
+              },
+            );
+          //Custom button to route back to the login page once clicked
+          case 2:
+            return custombutton(
+                label: 'Log out', 
+                labelColor: appWhiteColor,
+                action: () => Get.toNamed("/login"));
+          default:
+            return const SizedBox(); // Handle potential out-of-bounds index
+        }
+      },
     );
   }
 }

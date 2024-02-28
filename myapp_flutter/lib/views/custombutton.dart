@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:myapp_flutter/configs/constants.dart';
 import 'package:myapp_flutter/pages/dashboard.dart';
+import 'package:myapp_flutter/views/customcontroller.dart';
+import 'package:myapp_flutter/views/customtexts.dart';
 
 class custombutton extends StatelessWidget {
-  final TextEditingController? controller;
+  final VoidCallback action;
+  final String label;
+  final Color? labelColor;
   const custombutton({
     super.key,
-    String? label,
-    this.controller, 
+    required this.label,
+    required this.action, 
+    this.labelColor,
     // ignore: non_constant_identifier_names
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +31,12 @@ class custombutton extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => Dashboard()));
+        action();
       },
-      child: Text('Login'),
+      child: customText(
+        label,
+        label: label,
+      ),
     );
   }
 }
