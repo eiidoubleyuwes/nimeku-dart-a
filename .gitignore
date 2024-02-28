@@ -25,5 +25,5 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
-.gitignore.gitignore
+.gitignore
 /myapp_flutter
