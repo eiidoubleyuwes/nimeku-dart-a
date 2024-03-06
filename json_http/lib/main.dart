@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:json_http/mylist.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,8 +19,7 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Flutter Demo'),
           ),
-          body: const Center(
-            child: Text('Hello World'),
+          body: const MyListView()
           ),
         ),
       ),
